@@ -1,4 +1,4 @@
-/class Person {
+class Person {
   constructor(name, age) {
     this._name = name;
     this._age = age;
@@ -34,13 +34,15 @@ window.Person = Person;
 window.Student = Student;
 window.Teacher = Teacher;
 
-class Person {}
+// Test the classes
+const person1 = new Person("John", 30);
+console.log(person1.name); // Output: John
+person1.age = 31; // Set age using the setter
+console.log(person1.age); // Output: 31
 
-class Student extends Person {}
+const student1 = new Student("Alice", 20);
+student1.study(); // Output: Alice is studying.
 
-class Teacher extends Person {}
+const teacher1 = new Teacher("Professor Smith", 45);
+teacher1.teach(); // Output: Professor Smith is teaching.
 
-// Do not change the code below this line
-window.Person = Person;
-window.Student = Student;
-window.Teacher = Teacher;
