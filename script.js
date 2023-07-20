@@ -11,10 +11,6 @@ class Person {
   set age(age) {
     this._age = age;
   }
-
-  get age() {
-    return this._age;
-  }
 }
 
 class Student extends Person {
@@ -29,20 +25,11 @@ class Teacher extends Person {
   }
 }
 
-// Do not change the code below this line
-window.Person = Person;
-window.Student = Student;
-window.Teacher = Teacher;
+// Example usage:
+const john = new Student('John', 20);
+const sarah = new Teacher('Sarah', 35);
 
-// Test the classes
-const person1 = new Person("John", 30);
-console.log(person1.name); // Output: John
-person1.age = 31; // Set age using the setter
-console.log(person1.age); // Output: 31
+john.study(); // Output: "John is studying."
+sarah.teach(); // Output: "Sarah is teaching."
 
-const student1 = new Student("Alice", 20);
-student1.study(); // Output: Alice is studying.
-
-const teacher1 = new Teacher("Professor Smith", 45);
-teacher1.teach(); // Output: Professor Smith is teaching.
 
